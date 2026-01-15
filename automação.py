@@ -23,7 +23,7 @@ def automacao():
         campo_cnpj = wait.until(
             EC.presence_of_element_located((By.NAME, "usuario"))
         )
-        campo_cnpj.send_keys("17359233000188") 
+        campo_cnpj.send_keys(ps.getenv("CNPJ_SUFRAMA") 
     except ElementNotVisibleException:
         print("Elemento não visivel")
     except Exception as e:
@@ -36,7 +36,7 @@ def automacao():
         campo_senha = wait.until(
             EC.presence_of_element_located((By.NAME, "senha"))
         )
-        campo_senha.send_keys('Tambasa1788')
+        campo_senha.send_keys(os.getenv("SENHA_SUFRAMA")
     except Exception as e:
         print(f"Erro ao preencher senha, {e}")
     except ElementNotVisibleException:
@@ -160,3 +160,4 @@ def automacao():
             print(f"Erro ao salvar dados na planilha, {e}")
 
 automacao()
+
