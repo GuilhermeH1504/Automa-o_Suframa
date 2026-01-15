@@ -158,6 +158,7 @@ def automacao():
                 print("Dados salvos com sucesso")
         except Exception as e:
             print(f"Erro ao salvar dados na planilha, {e}")
-
+..
 automacao()
+
 
